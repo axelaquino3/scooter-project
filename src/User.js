@@ -22,12 +22,12 @@ class User {
 
 const u1 =  new User("Joe Bloggs", "test123", 21);
 
-console.log(u1)
-console.log(u1.username)
-u1.login("test123")
-console.log(u1)
-u1.logout()
-console.log(u1)
+// console.log(u1)
+// console.log(u1.username)
+// u1.login("test123")
+// console.log(u1)
+// u1.logout()
+// console.log(u1)
 
 
 
