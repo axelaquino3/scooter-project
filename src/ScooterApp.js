@@ -29,6 +29,30 @@ class ScooterApp {
         throw new Error( "Username or password is incorrect")
     }
   }
+
+  createScooter(station) {
+
+    let newScooter = new Scooter(station)
+    this.stations[station].push(newScooter)
+
+    if(!station in this.stations){
+      throw new Error("no such station")
+    }
+    
+  }
+
+  dockScooter(scooter, station) {
+    this.stations[station]
+    console.log("scooter is docked")
+    
+    if(!station in this.stations) {
+      throw new Error("no such station")
+    }
+
+    // if() {
+    //   throw new Error("scooter already at station")
+    // }
+  }
 }
 
 const u1 = new User("Joe Bloggs", "test123", 21)
@@ -38,6 +62,12 @@ const u3 = new User("Sam Man", "test12", 30)
 const app1 = new ScooterApp
 app1.registerUser("JBloggs", "test123", 21)
 app1.loginUser("JBloggs", "test123")
+
+app1.createScooter("main")
+app1.createScooter("hello")
+console.log(app1)
+
+
 
 
 
